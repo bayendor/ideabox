@@ -4,19 +4,20 @@
     Your Idea:
   </p>
   <input type='text' name='idea[title]'/><br/>
+  <br/>
   <textarea name='idea[description]'></textarea><br/>
   <input type='submit'/>
 </form>
-
+<br/>
 <h3>Existing Ideas</h3>
-
+<br/>
 <ul>
   <% ideas.each do |idea| %>
     <li>
       <form action='/<%= idea.id %>/like' method='POST' style="display: inline">
         <input type='submit' value="+"/>
       </form>
-      <%= idea.title %><br/>
+      <%= idea.title.upcase %><br/>
       <%= idea.description %>
       <a href="/<%= idea.id %>/edit">Edit</a>
       <form action='/<%= idea.id %>' method='POST'>
