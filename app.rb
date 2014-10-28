@@ -7,9 +7,8 @@ class IdeaBoxApp < Sinatra::Base
     register Sinatra::Reloader
   end
 
-
   get '/' do
-    erb :index, locals: {ideas: Idea.all}
+    erb :index, locals: { ideas: Idea.all }
   end
 
   not_found do
