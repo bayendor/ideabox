@@ -6,7 +6,7 @@ class IdeaBoxApp < Sinatra::Base
   end
 
   get '/' do
-    erb :index
+    erb :index, locals: {ideas: Idea.all}
   end
 
   not_found do
@@ -14,8 +14,8 @@ class IdeaBoxApp < Sinatra::Base
   end
 
   post '/' do
-    idea = Idea.new
+    idea = Idea.new(params['idea_title'], params['idea_description'])
     idea.save
-    'Creating an IDEA!'
+    redirect '/'
   end
 end
