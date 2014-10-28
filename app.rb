@@ -1,7 +1,21 @@
-# require 'sinatra/reloader'
+require './idea'
 
 class IdeaBoxApp < Sinatra::Base
+  configure :development do
+    register Sinatra::Reloader
+  end
+
   get '/' do
-    "<h1>Hello, World!</h1><blockquote>I guess I always felt even if the world came to an end, McDonald's would still be open. <cite>Susan Beth Pfeffer</cite></blockquote>"
+    erb :index
+  end
+
+  not_found do
+    erb :error
+  end
+
+  post '/' do
+    idea = Idea.new
+    idea.save
+    'Creating an IDEA!'
   end
 end
