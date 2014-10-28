@@ -17,6 +17,9 @@
       <form action='/<%= idea.id %>/like' method='POST' style="display: inline">
         <input type='submit' value="+"/>
       </form>
+      <form action='/<%= idea.id %>/unlike' method='POST' style="display: inline">
+        <input type='submit' value="-"/>
+      </form>
       <%= idea.title.upcase %><br/>
       <%= idea.description %>
       <a href="/<%= idea.id %>/edit">Edit</a>

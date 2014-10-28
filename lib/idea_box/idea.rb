@@ -25,6 +25,10 @@ class Idea
     @rank += 1
   end
 
+  def unlike!
+    @rank -= 1
+  end
+
   def <=>(other)
     other.rank <=> rank
   end

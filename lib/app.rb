@@ -42,4 +42,11 @@ class IdeaBoxApp < Sinatra::Base
     IdeaStore.update(id.to_i, idea.to_h)
     redirect '/'
   end
+
+  post '/:id/unlike' do |id|
+    idea = IdeaStore.find(id.to_i)
+    idea.unlike!
+    IdeaStore.update(id.to_i, idea.to_h)
+    redirect '/'
+  end
 end
