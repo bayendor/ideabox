@@ -2,13 +2,18 @@
 ideas:
 - title: diet
   description: coffee all the time
+  rank: 1
 - title: exercise
   description: play video games
-- title: app
-  description: social network for cats
+  rank: 1
 - title: excursion
   description: take everyone to the zoo
+  rank: 1
 - title: party
   description: dance all night and all day
 - title: story
   description: a princess steals a spaceship
+  rank: 1
+- title: app
+  description: social network for dogs
+  rank: 2
