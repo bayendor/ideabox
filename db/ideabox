@@ -2,10 +2,9 @@
 ideas:
 - title: diet
   description: coffee all the time
-  rank: 1
+  rank: 2
 - title: exercise
   description: play video games
-  rank: 1
 - title: excursion
   description: take everyone to the zoo
   rank: 1
@@ -16,4 +15,5 @@ ideas:
   rank: 1
 - title: app
   description: social network for dogs
-  rank: 3
+- title: vacation
+  description: cycling tour of Italy
