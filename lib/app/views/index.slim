@@ -1,0 +1,45 @@
+.container
+  .span6
+    h1 IdeaBox
+    form action="/" method="POST"
+      .input-group
+        span.input-group-addon Title
+        input.form-control name="idea[title]" type="text" /
+      br/
+      .input-group
+        span.input-group-addon Description
+        input.form-control name="idea[description]" type="text" /
+      span.input-group-btn
+        button.btn.btn-primary type="submit"  Submit
+    br/
+.container
+  .span6
+    h3 Existing Ideas
+    table.table.table-condensed.table-striped.table-hover.text-center
+      thead
+        tr
+          th.text-center Title
+          th.text-center Description
+          th.text-center Like
+          th.text-center Unlike
+          th.text-center
+          th.text-center
+      tbody
+        tr
+          - ideas.each do |idea|
+            td= idea.title.capitalize
+            td= idea.description
+            td
+              form action="/#{idea.id}/like" method="POST" style=("display: inline")
+                input type="submit" value="+" /
+            td
+              form action="/#{idea.id}/unlike" method="POST" style=("display: inline")
+                input type="submit" value="-" /
+            td
+              a.btn.btn-primary href="/#{idea.id}/edit"  edit
+            td
+              | <form action='/#{idea.id}', method='POST'
+              input name="_method" type="hidden" value="DELETE"
+                button.btn.btn-danger type="submit"  delete
+br/
+
