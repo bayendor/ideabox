@@ -1,5 +1,4 @@
 require 'idea_box'
-require 'slim'
 
 class IdeaBoxApp < Sinatra::Base
   set :method_override, true
@@ -14,7 +13,7 @@ class IdeaBoxApp < Sinatra::Base
   end
 
   get '/' do
-    slim :index, locals: { ideas: IdeaStore.all.sort, idea: Idea.new(params) }
+    erb :index, locals: { ideas: IdeaStore.all.sort, idea: Idea.new(params) }
   end
 
   post '/' do
