@@ -1,28 +1,27 @@
 <div class='container'>
-  <div class='span6'>
-    <h1>IdeaBox</h1>
-      <form action='/' method='POST'>
-        <div class="input-group">
-          <span class="input-group-addon">Title</span>
-          <input type="text" class="form-control" name='idea[title]'/>
-        </div>
-        <br/>
-        <div class="input-group">
-          <span class="input-group-addon">Description</span>
-          <input type="text" class="form-control" name='idea[description]'/></br>
-        </div>
-      </br>
-        <span class='input-group-btn'>
-          <button class='btn btn-primary' type='submit'>Submit</button>
-        </span>
-      </form>
+  <h1>IdeaBox</h1>
+    <form action='/' method='POST'>
+      <div class="input-group">
+        <span class="input-group-addon">Title</span>
+        <input type="text" class="form-control" name='idea[title]'/>
+      </div>
+      <br/>
+      <div class="input-group">
+        <span class="input-group-addon">Description</span>
+        <input type="text" class="form-control" name='idea[description]'/></br>
+      </div>
+    </br>
+      <span class='input-group-btn'>
+        <button class='btn btn-success' type='submit'>Submit</button>
+      </span>
+    </form>
     <br/>
   </div>
 </div>
 
 <div class='container'>
-  <div class='span6'>
-    <h3>Existing Ideas</h3>
+<div class="panel panel-primary">
+  <div class="panel-heading"><h3>Existing Ideas<h3></div>
     <table class="table table-condensed table-striped table-hover text-center">
       <thead>
         <tr>
@@ -61,6 +60,7 @@
     </table>
 
   </div>
+</div>
 </div>
 
 <br/>
