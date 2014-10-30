@@ -5,7 +5,7 @@ ideas:
   rank: 1
 - title: exercise
   description: play video games
-  rank: 1
+  rank: 3
 - title: excursion
   description: take everyone to the zoo
   rank: 1
@@ -13,7 +13,7 @@ ideas:
   description: dance all night and all day
 - title: story
   description: a princess steals a spaceship
-  rank: 1
+  rank: 0
 - title: app
   description: social network for dogs
   rank: 2
