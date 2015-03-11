@@ -1,4 +1,5 @@
 require 'yaml/store'
+require './lib/redis-config'
 
 class IdeaStore
   def self.all
@@ -49,6 +50,7 @@ class IdeaStore
   end
 
   def self.create(attributes)
+    $redis.publish :community, attributes.to_json
     database.transaction do
       database['ideas'] << attributes
     end
